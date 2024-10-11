@@ -1,6 +1,6 @@
 import { db } from "./dbConfig";
 import { eq, sql, desc } from "drizzle-orm";
-import { Users, Subscription, GeneratedContent } from "./schema";
+import { Users, Subscriptions, GeneratedContent } from "./schema";
 
 export async function createOrUpdateUser(
   clerkUserId: string,
