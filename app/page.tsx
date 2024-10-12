@@ -1,219 +1,205 @@
 import { Navbar } from "@/components/Navbar";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { SignUpButton } from "@clerk/nextjs";
+import {
+  ArrowRightIcon,
+  CheckCircleIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  RocketIcon,
+  SparklesIcon,
+  TrendingUpIcon,
+  TwitterIcon,
+  ZapIcon,
+} from "lucide-react";
+import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
 
 export default function Home() {
+  const { userId } = auth();
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <Navbar />
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sit
-          molestiae inventore placeat explicabo consequuntur quasi culpa eum,
-          optio, nobis voluptatibus distinctio quaerat ducimus amet ipsa!
-          Temporibus exercitationem laudantium obcaecati esse. Fuga eligendi
-          consequatur ut fugit numquam odio vero eaque nesciunt eveniet quis
-          magnam soluta porro, voluptas ab unde nemo error ducimus atque eum
-          quam obcaecati sed veritatis in voluptatibus. Omnis nam quos
-          dignissimos maxime ad at, adipisci accusamus assumenda voluptatum
-          veniam aliquam blanditiis tempora esse dolor consequatur praesentium,
-          iure quia necessitatibus asperiores repudiandae dolorem nobis nemo.
-          Nihil recusandae nobis fuga! Totam in minima neque nemo provident
-          molestiae est, quibusdam accusamus! Dignissimos, ad mollitia! Est
-          totam error possimus, quod fuga autem illum, ea, sint expedita
-          corrupti porro. Expedita distinctio dolorem saepe sunt repudiandae
-          nesciunt, debitis qui reiciendis vitae dolore aliquid ex perspiciatis
-          obcaecati hic ullam nobis adipisci blanditiis nihil facilis incidunt,
-          odit, eos ad! Veritatis sed illo recusandae perspiciatis quis non
-          magnam saepe error consequatur! Deserunt, voluptatem quas. In at
-          ducimus placeat quibusdam! Odio assumenda perferendis quis placeat
-          aliquam eaque labore debitis accusamus facilis quibusdam esse, iusto,
-          porro necessitatibus? Repudiandae neque accusantium provident rem,
-          laborum, repellat obcaecati ea adipisci quidem est natus consequuntur
-          quas. Officia, fuga commodi neque vitae repellendus ipsam ab in labore
-          ex, similique repudiandae impedit architecto assumenda quod officiis
-          necessitatibus pariatur distinctio laborum temporibus dicta!
-          Laboriosam a odit illum nobis, blanditiis id? Quasi nihil, quod sint
-          dolor mollitia corporis amet. Exercitationem sequi soluta consequatur
-          iure sapiente corporis natus eius? Magni dolorem earum nostrum debitis
-          est, vero explicabo ipsam aperiam quam quis eius dolore, natus nihil
-          minus? Consectetur reiciendis quidem aspernatur animi a officiis ex
-          incidunt ipsum quae dicta inventore, id quod vero! Adipisci itaque cum
-          voluptatem molestiae officia consectetur sint assumenda, quibusdam
-          tenetur natus, esse quas et numquam nihil id magni. Illo inventore
-          enim debitis suscipit nesciunt a aperiam, ad esse quae at nostrum non
-          vero aut unde dignissimos accusamus laboriosam culpa? Accusamus
-          inventore vel nemo, repellendus ea mollitia beatae aperiam quasi
-          pariatur quia cumque cum eligendi sint ex architecto eveniet corrupti
-          nobis. Unde provident aut veniam sint tenetur quisquam dolores
-          distinctio libero eos esse repellendus ipsum magni cum soluta itaque,
-          laborum neque expedita similique iusto, eligendi maxime laudantium
-          saepe, nemo illum. Est iste earum blanditiis quasi libero repudiandae
-          laborum consectetur distinctio tenetur, corporis perferendis totam
-          cupiditate asperiores minima, voluptatum recusandae accusantium
-          accusamus porro molestiae adipisci alias illo. Labore libero aperiam
-          ullam voluptates beatae aliquam iusto veritatis consequatur explicabo,
-          fuga qui mollitia reiciendis est facilis odio itaque quia quas autem
-          laborum eius. Fugiat reprehenderit quod ipsam, eligendi ipsa
-          repudiandae vero natus dolorem odio, facilis error ut molestias.
-          Consectetur quos quis accusantium dolores porro repellat blanditiis
-          sunt voluptatibus aspernatur incidunt nam, placeat quaerat ea quae.
-          Placeat libero unde eos ullam recusandae alias dolores facere. Quod,
-          quaerat facere porro molestias eveniet fuga eligendi itaque a dolores
-          ab nesciunt dignissimos, dolorem dolore! Deleniti nihil dolor enim
-          vero perspiciatis exercitationem, ad cupiditate animi culpa, inventore
-          consequatur? Ipsum temporibus dolores aliquid, voluptatibus eligendi
-          aspernatur error reiciendis nam animi minus vel nesciunt. Quasi
-          explicabo neque provident molestiae, quibusdam animi debitis enim
-          tempore dignissimos aut praesentium nihil tenetur dolorem possimus
-          sunt officiis voluptate hic corrupti libero corporis! Id a mollitia
-          cupiditate, consequuntur inventore tempora! Repellat labore sint
-          quisquam minus itaque molestiae, exercitationem fuga dolores corrupti
-          dolorem ab iusto dicta impedit libero aliquam, maxime in voluptate
-          corporis? Quo impedit aliquid, incidunt explicabo laborum, excepturi
-          rem non consequuntur, nulla in quaerat neque laboriosam! Ut minus,
-          veniam praesentium fugit rerum incidunt, dolorum vitae ducimus minima
-          adipisci asperiores eaque excepturi numquam, consectetur officiis
-          modi. Dolorem eligendi, commodi voluptas deserunt voluptatem assumenda
-          dicta, vero reiciendis possimus cum autem quasi totam, quis repellat
-          amet eveniet hic fugiat mollitia earum fuga nulla. Minus, dignissimos.
-          Beatae necessitatibus provident soluta aperiam. Beatae ex aspernatur
-          voluptatem cumque. Dignissimos, dolores iure, id maxime ab dolore
-          porro reiciendis asperiores optio pariatur beatae fugiat fugit in
-          explicabo adipisci corrupti eaque autem. Suscipit laborum repellat
-          consequatur voluptate distinctio repudiandae totam, beatae est
-          praesentium? Totam, provident. Totam velit autem modi animi facilis
-          expedita repellat id enim eos, officia sed distinctio molestias labore
-          ipsa tempore quaerat sapiente temporibus iusto. Fuga dolorum neque
-          aliquam dolorem dolor! In enim quidem consectetur maxime voluptates?
-          Assumenda nesciunt eligendi minima ducimus magni! Nemo excepturi
-          dolorem nihil necessitatibus quo pariatur dolorum amet ea voluptatibus
-          dignissimos. Tempore praesentium illo tempora nesciunt dolorem nobis.
-          Nulla quaerat incidunt adipisci! Dolorum suscipit eum dolores soluta
-          quod voluptas obcaecati reprehenderit at, commodi tenetur quia id
-          rerum. Assumenda quo rerum iste id nobis totam eaque rem, magnam
-          officia blanditiis ducimus nam pariatur corporis accusantium ab
-          quisquam, perspiciatis molestias iure sequi repudiandae incidunt
-          dignissimos molestiae porro? Ab quam mollitia hic provident, dolor
-          excepturi suscipit totam odit ipsam fuga rem esse. Iure nesciunt
-          dolorum nostrum, neque itaque adipisci eos voluptate fugiat
-          reprehenderit deserunt et necessitatibus eius incidunt ex. Doloremque
-          ex numquam fugiat nobis illum assumenda accusamus labore, consequatur
-          non veritatis nemo dolore officia necessitatibus eum, laudantium
-          ratione explicabo atque quasi magni praesentium? Impedit dolorem
-          beatae cumque, exercitationem ducimus reprehenderit iure, illum porro
-          soluta tenetur sed nobis voluptas pariatur sint. Temporibus cum neque
-          delectus dolorem repellat incidunt quo laudantium quidem maxime,
-          assumenda corrupti sint modi debitis iusto consequuntur eaque commodi
-          mollitia similique libero quibusdam provident rerum. Mollitia itaque
-          id earum obcaecati est, iusto nisi dignissimos placeat rerum illum
-          dolorem quos ad fuga explicabo suscipit expedita aperiam voluptate
-          beatae temporibus fugit delectus magni? Aliquam sapiente inventore
-          tempore aperiam, mollitia delectus aut sunt id officia, nesciunt
-          obcaecati impedit incidunt rerum quaerat. Vel consequatur rem
-          voluptates tempora inventore ducimus. Recusandae dolorum quasi
-          inventore quaerat ad officiis quisquam excepturi? Vero asperiores at
-          nostrum repellat rerum similique veritatis amet quibusdam ex
-          blanditiis, dolorem harum? At ea consequatur, cumque dignissimos
-          tempore provident totam incidunt eos et eveniet vero voluptatum?
-          Minima a, quisquam eligendi consequuntur exercitationem asperiores?
-          Dolore optio enim beatae nostrum fugit nulla molestiae, quidem eius
-          iste accusantium eos, quaerat voluptatum repellendus voluptates
-          commodi unde dolorum eveniet ex ea earum aliquam. Ullam ipsum sapiente
-          exercitationem doloremque et at, esse in quia itaque inventore
-          provident, mollitia labore qui dicta illo unde quod.
-        </p>
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 animate-float">
+          <SparklesIcon className="w-8 h-8 text-yellow-400 opacity-50" />
+        </div>
+        <div className="absolute top-40 right-20 animate-float animation-delay-2000">
+          <ZapIcon className="w-10 h-10 text-blue-400 opacity-50" />
+        </div>
+        <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000">
+          <TrendingUpIcon className="w-12 h-12 text-green-400 opacity-50" />
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Hero Section */}
+        <div className="text-center py-20 lg:py-32 relative">
+          <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+            AI-Powered Social Media Content Generator
+          </h1>
+          <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+            Create engaging content for Twitter, Instagram, and LinkedIn with
+            cutting-edge AI technology.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <Button
+              asChild
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              <Link href="/generate">Start Creating</Link>
+            </Button>
+            <Button
+              asChild
+              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
+            >
+              <Link href="#features">Learn More</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="py-20" id="features">
+          <h2 className="text-3xl font-bold mb-16 text-center text-white">
+            Supercharge Your Social Media Presence
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Twitter Threads",
+                icon: <TwitterIcon className="w-10 h-10 mb-4 text-blue-400" />,
+                description:
+                  "Generate compelling Twitter threads that engage your audience and boost your reach.",
+              },
+              {
+                title: "Instagram Captions",
+                icon: (
+                  <InstagramIcon className="w-10 h-10 mb-4 text-pink-400" />
+                ),
+                description:
+                  "Create catchy captions for your Instagram posts that increase engagement and followers.",
+              },
+              {
+                title: "LinkedIn Posts",
+                icon: <LinkedinIcon className="w-10 h-10 mb-4 text-blue-600" />,
+                description:
+                  "Craft professional content for your LinkedIn network to establish thought leadership.",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="p-8 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <div className="flex flex-col items-center text-center">
+                  {feature.icon}
+                  <h3 className="text-2xl font-semibold mb-3 text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="py-20 bg-gray-900 rounded-3xl my-20 relative">
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-3xl">
+            <svg
+              className="absolute w-full h-full"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,0 L100,0 L100,100 L0,100 Z"
+                fill="url(#grid-pattern)"
+              />
+            </svg>
+            <defs>
+              <pattern
+                id="grid-pattern"
+                width="10"
+                height="10"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 10 0 L 0 0 0 10"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.05)"
+                  strokeWidth="0.5"
+                />
+              </pattern>
+            </defs>
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
+              Why Choose Our AI Content Generator?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {[
+                "Save time and effort on content creation",
+                "Consistently produce high-quality posts",
+                "Increase engagement across all platforms",
+                "Stay ahead of social media trends",
+                "Customize content to match your brand voice",
+                "Scale your social media presence effortlessly",
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircleIcon className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center py-20 relative">
+          <div className="absolute top-10 right-10 animate-spin-slow">
+            <svg
+              className="w-20 h-20 text-blue-500 opacity-20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M12 6V12L16 14"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <h2 className="text-4xl font-bold mb-8 text-white">
+            Ready to revolutionize your social media strategy?
+          </h2>
+          {userId ? (
+            <Button
+              asChild
+              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              <Link href="/generate">
+                Generate Content Now <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          ) : (
+            <SignUpButton mode="modal">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Get Started Free <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Button>
+            </SignUpButton>
+          )}
+          <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

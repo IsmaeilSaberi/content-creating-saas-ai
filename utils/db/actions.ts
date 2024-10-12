@@ -1,6 +1,7 @@
 import { db } from "./dbConfig";
 import { eq, sql, desc } from "drizzle-orm";
 import { Users, Subscriptions, GeneratedContent } from "./schema";
+import { sendWelcomeEmail } from "../mailtarp";
 
 export async function createOrUpdateUser(
   clerkUserId: string,
@@ -35,6 +36,7 @@ export async function createOrUpdateUser(
     console.log("new user created", newUser);
 
     // send welcome email to new users
+    sendWelcomeEmail(email, name);
   } catch (error) {
     console.error("Error creating or updating user:", error);
     return null;
