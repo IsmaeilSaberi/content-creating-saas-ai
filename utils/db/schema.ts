@@ -34,7 +34,7 @@ export const Subscriptions = pgTable("subscriptions", {
 
 export const GeneratedContent = pgTable("generated_content", {
   id: serial("id").primaryKey(),
-  useId: integer("user_id")
+  userId: integer("user_id")
     .references(() => Users.id)
     .notNull(),
   content: text("content").notNull(),
