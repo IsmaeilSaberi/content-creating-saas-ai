@@ -19,7 +19,7 @@ export const Users = pgTable("users", {
 
 export const Subscriptions = pgTable("subscriptions", {
   id: serial("id").primaryKey(),
-  useId: integer("user_id")
+  userId: integer("user_id")
     .references(() => Users.id)
     .notNull(),
   stripeSubscriptionId: varchar("stripe_subscription_id", {
