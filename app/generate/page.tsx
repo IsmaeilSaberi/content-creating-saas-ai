@@ -291,7 +291,7 @@ export default function GenerateContent() {
                   </p>
                   <div className="flex items-center text-xs text-gray-400 mt-2">
                     <Clock className="mr-1 h-3 w-3" />
-                    {new Date(item.createdAt).toLocaleString()}
+                    {new Date(item.createdAt!).toLocaleString()}
                   </div>
                 </div>
               ))}
