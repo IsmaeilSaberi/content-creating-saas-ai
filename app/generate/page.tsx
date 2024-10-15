@@ -51,7 +51,7 @@ interface HistoryItem {
   contentType: string;
   prompt: string;
   content: string;
-  createdAt: Date;
+  createdAt: Date | null;
 }
 
 export default function GenerateContent() {
